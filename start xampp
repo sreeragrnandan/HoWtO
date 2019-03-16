@@ -1,5 +1,7 @@
 
 Download from : https://vitux.com/how-to-install-xampp-on-your-ubuntu-18-04-lts-system/
 
+In Terminal :
+
 sudo /etc/init.d/apache2 stop   
 sudo /opt/lampp/lampp start
