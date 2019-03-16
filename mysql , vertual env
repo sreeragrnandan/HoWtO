@@ -5,3 +5,7 @@ https://www.journaldev.com/15539/python-mysql-example-tutorial
 PYTHON virtualenv
 
 https://packaging.python.org/guides/installing-using-pip-and-virtualenv/
+
+Activate verenv
+
+source env/bin/activate
