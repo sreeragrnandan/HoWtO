@@ -1,34 +1,16 @@
-eno1: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
-        ether 80:ce:62:10:90:c7  txqueuelen 1000  (Ethernet)
-        RX packets 0  bytes 0 (0.0 B)
-        RX errors 0  dropped 0  overruns 0  frame 0
-        TX packets 0  bytes 0 (0.0 B)
-        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+Step 1: Open port in firewall
+$ sudo ufw enable 
+$ sudo ufw allow 8000
 
-enx001e101f0000: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
-        inet 192.168.8.100  netmask 255.255.255.0  broadcast 192.168.8.255
-        inet6 fe80::9bc2:11f3:1eb0:fa18  prefixlen 64  scopeid 0x20<link>
-        ether 00:1e:10:1f:00:00  txqueuelen 1000  (Ethernet)
-        RX packets 40220  bytes 29239443 (29.2 MB)
-        RX errors 0  dropped 0  overruns 0  frame 0
-        TX packets 48007  bytes 5835640 (5.8 MB)
-        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+Step 2: Determine local IP address
+$ ifconfig
 
-lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
-        inet 127.0.0.1  netmask 255.0.0.0
-        inet6 ::1  prefixlen 128  scopeid 0x10<host>
-        loop  txqueuelen 1000  (Local Loopback)
-        RX packets 618852  bytes 165323520 (165.3 MB)
-        RX errors 0  dropped 0  overruns 0  frame 0
-        TX packets 618852  bytes 165323520 (165.3 MB)
-        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+Look for your "inet_addr" for the appropriate network adapter. For this example, I'm on 192.168.0.5.
 
-wlo1: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
-        inet 192.168.8.101  netmask 255.255.255.0  broadcast 192.168.8.255
-        inet6 fe80::cd42:f4f9:b877:68b5  prefixlen 64  scopeid 0x20<link>
-        ether b0:52:16:ba:c7:4f  txqueuelen 1000  (Ethernet)
-        RX packets 16953  bytes 10266288 (10.2 MB)
-        RX errors 0  dropped 30  overruns 0  frame 0
-        TX packets 8606  bytes 1367221 (1.3 MB)
-        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+Step 3: Start Django development server
 
+$ python manage.py runserver 192.168.0.5:8000
+
+Step 4: Access site on mobile browser
+
+The key here is to make sure that your mobile device is connected to your local wi-fi network. This obviously won't work if the device is connected to the cellular network without a VPN or some other trickery. Once you're on wi-fi, you can point your mobile browser to '192.168.0.5:8000' and access your app!
