@@ -1,2 +1,8 @@
 test and train:
 https://github.com/codebasics/py/blob/master/ML/6_train_test_split/train_test_split.ipynb
+
+How to use Keras fit and fit_generator (a hands-on tutorial):
+https://www.pyimagesearch.com/2018/12/24/how-to-use-keras-fit-and-fit_generator-a-hands-on-tutorial/
+
+How to Save and Load Your Keras Deep Learning Model:
+https://machinelearningmastery.com/save-load-keras-deep-learning-models/
