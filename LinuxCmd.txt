@@ -1,1 +1,2 @@
-
+Copy files from a folder
+$ mv `ls -d ./data/smoking/* | head -90` ./data/validation/smoking
