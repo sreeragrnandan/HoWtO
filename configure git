@@ -1,3 +1,6 @@
+Colab:
+!git remote rm origin
+!git remote add origin https://sreeragrnandan:PassWord@github.com/sreeragrnandan/Cat-vs-Dog-dataset.git
 create a new repository on the command line
 
 echo "# HoWtO" >> README.md
