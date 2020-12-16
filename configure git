@@ -1,9 +1,6 @@
 Install git: https://www.youtube.com/watch?v=2j7fD92g-gE
 
-Colab:
-!git remote rm origin
-!git remote add origin https://sreeragrnandan:PassWord@github.com/sreeragrnandan/Cat-vs-Dog-dataset.git
-create a new repository on the command line
+Branch: https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging
 
 echo "# HoWtO" >> README.md
 git init
@@ -16,3 +13,8 @@ push an existing repository from the command line
 
 git remote add origin https://github.com/sreeragrnandan/HoWtO.git
 git push -u origin master
+
+Colab:
+!git remote rm origin
+!git remote add origin https://sreeragrnandan:PassWord@github.com/sreeragrnandan/Cat-vs-Dog-dataset.git
+create a new repository on the command line
